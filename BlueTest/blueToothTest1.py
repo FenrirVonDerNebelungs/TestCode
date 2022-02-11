@@ -9,6 +9,8 @@ print("Accepted conn from:",address)
 
 data = client_sock.recv(1024)
 print("recieved:",data)
+offMsg="OFF"
+client_sock.send(offMsg)
 
 client_sock.close()
 server_sock.close()
