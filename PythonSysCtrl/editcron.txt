@@ -1,0 +1,2 @@
+crontab -e
+@reboot sleep 40 && sudo /usr/bin/python /home/pi/Rover/PySRead/SRead.py
