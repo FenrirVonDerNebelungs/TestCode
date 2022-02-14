@@ -8,6 +8,7 @@ sock.connect((bd_addr,port))
 
 sock.send("hello!!")
 data = sock.recv(1024)
+print(data)
 if data=="OFF":
 	print("shut off")
 sock.close()

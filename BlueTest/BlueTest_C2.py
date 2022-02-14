@@ -30,7 +30,5 @@ sock.connect((target_address, port))
 sock.send("test data")
 com_msg=sock.recv(128)
 print(com_msg)
-if com_msg=="OFF":
-	print("shutdown")
 
 sock.close()
