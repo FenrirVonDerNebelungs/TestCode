@@ -49,7 +49,7 @@ void foo_test::sendMsg(char msg[], int len) {
 
 extern "C"
 {
-	void* wrap_init_foo_test(void*)/*void pointer is there just for python*/
+	void* wrap_init_foo_test(void)/*try without: void pointer is there just for python*/
 	{
 		return new(std::nothrow) foo_test;
 	}
