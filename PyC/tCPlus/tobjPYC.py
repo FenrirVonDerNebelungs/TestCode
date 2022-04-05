@@ -5,7 +5,7 @@
 
 from ctypes import *
 
-tPylib = ctypes.cdll.LoadLibrary("/home/usrname/tobjpyc_lib.so")
+tPylib = ctypes.cdll.LoadLibrary("/home/usrname/TPyClib.so")
 
 tPylib.wrap_init.restype = ctypes.c_void_p
 
@@ -16,7 +16,7 @@ tPylib.wrap_send.argtypes = [ctypes.c_void_p, ctypes.c_char_p, ctypes.c_int]
 tPylib.wrap_send.restype = ctypes.c_void_p
 
 #start the program by creating the object
-pyCptr = wrap_init()
+pyCptr = tPylib.wrap_init()
 #initialize the message buffer that will be use to receive msgs
 msgbufr = create_string_buffer(100)
 msgbufs = create_string_buffer(100)

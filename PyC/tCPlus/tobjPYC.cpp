@@ -2,7 +2,7 @@
 this code may or may not function and is in no way
 guaranteed against causing damage directly or indirectly */
 
-#include "tobjpyc.h"
+#include "tobjPYC.h"
 
 testPy::testPy() {
 	init();
@@ -51,5 +51,6 @@ void testPy::sendMsg(char* msg, int len) {
 			std::cout << m_msg[i];
 	}
 	std::cout << '\n';
+	m_cnt++;
 	return;
 }
